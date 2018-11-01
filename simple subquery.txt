@@ -1,0 +1,6 @@
+        SELECT single IOBJGUID
+          FROM vlcvehicle
+          INTO lv_IOBJGUID
+         WHERE vhcle = ( SELECT vguid
+                           FROM /dbm/vbak_db
+                          WHERE vbeln = lv_dbmordnr ).
